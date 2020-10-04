@@ -1,0 +1,3 @@
+cython wrap_helper.py --cplus -3 -Werror
+g++ -c wrap_helper.cpp  -fPIC -I`python3-config --cflags`
+g++ wrap_helper.o -o wrap_helper.so -shared -L`python3-config --ldflags`
